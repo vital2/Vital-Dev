@@ -1,0 +1,33 @@
+net = 14
+Online
+vlan 14 Requires Internet  t
+net = 17
+Online
+vlan 17 Requires Internet  t
+net = 10
+Online
+vlan 10 Requires Internet  t
+net = 20
+Online
+vlan 20 Requires Internet  t
+net = 19
+Online
+vlan 19 Requires Internet  t
+net = 11
+Online
+vlan 11 Requires Internet  t
+net = 13
+Online
+vlan 13 Requires Internet  f
+net = 33
+Online
+vlan 33 Requires Internet  t
+net = 21
+Online
+vlan 21 Requires Internet  t
+net = 18
+Online
+vlan 18 Requires Internet  f
+net = 15
+Online
+vlan 15 Requires Internet  f

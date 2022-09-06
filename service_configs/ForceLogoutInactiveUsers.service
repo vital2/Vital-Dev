@@ -1,0 +1,15 @@
+[Unit]
+Description=Vital Web
+
+[Service]
+User=root
+Restart=always
+
+# update WorkingDirectory to the directory you have vital web python code
+WorkingDirectory=/home/vital/vital2.0/source/virtual_lab/vital_site
+# update python path the the venv you have created
+ExecStart=/home/vital/.virtualenvs/vital/bin/python manage.py ForceLogoutInactiveUsers
+
+[Install]
+WantedBy=multi-user.target
+

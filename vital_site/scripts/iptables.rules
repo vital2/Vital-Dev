@@ -1,0 +1,26 @@
+
+#Chain INPUT (policy ACCEPT)
+#target     prot opt source               destination
+ACCEPT     udp  --  anywhere             anywhere             udp spts:bootps:bootpc dpts:bootps:bootpc
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination
+ACCEPT     tcp  --  10.10.1.0/24         vlab-sftp            tcp dpt:ssh
+ACCEPT     all  --  10.10.1.0/24         10.10.1.0/24
+ACCEPT     tcp  --  10.13.1.0/24         vlab-sftp            tcp dpt:ssh
+ACCEPT     all  --  10.13.1.0/24         10.13.1.0/24
+ACCEPT     tcp  --  10.14.1.0/24         vlab-sftp            tcp dpt:ssh
+ACCEPT     all  --  10.14.1.0/24         10.14.1.0/24
+ACCEPT     tcp  --  10.17.1.0/24         vlab-sftp            tcp dpt:ssh
+ACCEPT     all  --  10.17.1.0/24         10.17.1.0/24
+ACCEPT     tcp  --  10.18.1.0/24         vlab-sftp            tcp dpt:ssh
+ACCEPT     all  --  10.18.1.0/24         10.18.1.0/24
+ACCEPT     tcp  --  10.19.1.0/24         vlab-sftp            tcp dpt:ssh
+ACCEPT     all  --  10.19.1.0/24         10.19.1.0/24
+ACCEPT     tcp  --  10.20.1.0/24         vlab-sftp            tcp dpt:ssh
+ACCEPT     all  --  10.20.1.0/24         10.20.1.0/24
+ACCEPT     tcp  --  10.21.1.0/24         vlab-sftp            tcp dpt:ssh
+ACCEPT     all  --  10.21.1.0/24         10.21.1.0/24
+ACCEPT     tcp  --  10.33.1.0/24         vlab-sftp            tcp dpt:ssh
+ACCEPT     all  --  10.33.1.0/24         10.33.1.0/24        :!ba=sh
+
