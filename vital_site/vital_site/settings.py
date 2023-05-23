@@ -15,9 +15,9 @@ config.read("/home/vital/config.ini")
 SECRET_KEY = config.get("Security", "SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['vitaldev.poly.edu','128.238.77.20']
 ADMINS = config.get("Email", "VITAL_ADMINS")
 
 # Application definition
@@ -123,7 +123,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+#STATIC_URL = '/home/vital/vital2.0/source/prod-code/vital_site/vital/static/'
 STATIC_ROOT = '/home/vital/vital_static'
+#STATIC_ROOT = '/home/vital/vital2.0/source/prod-code/vital_site/static'
+#STATICFILES_DIRS = [    '/home/vital/vital2.0/source/prod-code/vital_site/vital/static/',]
 
 CAPTCHA_IMAGE_SIZE = (120, 50)
 CAPTCHA_FONT_SIZE = 32
